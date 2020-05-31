@@ -23,7 +23,7 @@ function LogWrite([string]$logstring)
 ForEach ($name in $GroupName)
 {
    # Retrieves firewall rules based on Private, Public profile type and dumping into a file
-   Get-NetFirewallRule -DisplayGroup $name -Direction In | Where-Object {$_.Profile -eq 'Private , Public'} | Out-File $ListWMIGroupRules -Append
+   Get-NetFirewallRule -DisplayGroup $name -Direction In | Format-Table -Wrap -Property DisplayName, Enabled, Action, Owner | Where-Object {$_.Profile -eq 'Private , Public'} | Out-File $ListWMIGroupRules -Append
    
    $Return = Get-NetFirewallRule -DisplayGroup $name -Direction In | Where-Object {$_.Profile -eq 'Private , Public'} |  
    
