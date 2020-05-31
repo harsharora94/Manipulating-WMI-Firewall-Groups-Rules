@@ -9,8 +9,8 @@
 $GroupName = $args[0]
 $Direction = $args[1]
 $Profile = $args[2]
-$Logfile = "$env:SystemDrive\InstallSaveLog\OEM\EnableWMIGroupRules.log"
-$ListWMIGroupRules = "$env:SystemDrive\InstallSaveLog\OEM\ListWMIGroupRules.log"
+$Logfile = "$env:SystemDrive\EnableWMIGroupRules.log"
+$ListWMIGroupRules = "$env:SystemDrive\ListWMIGroupRules.log"
 $FirewallRuleNames = @('Windows Management Instrumentation (ASync-In)', 'Windows Management Instrumentation (DCOM-In)', 'Windows Management Instrumentation (WMI-In)')
 $FirewallRuleProfile = 'Public'
 
